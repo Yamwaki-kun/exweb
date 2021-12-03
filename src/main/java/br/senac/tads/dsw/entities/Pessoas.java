@@ -6,6 +6,7 @@
 package br.senac.tads.dsw.entities;
 
 import java.time.LocalDate;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import org.springframework.data.annotation.Id;
@@ -14,10 +15,12 @@ import org.springframework.data.annotation.Id;
  *
  * @author Arnaldo
  */
-
+@Entity
 public class Pessoas {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    
+    @javax.persistence.Id
     private Long id;
     private String nome;
     private String email;

@@ -6,9 +6,9 @@
 package br.senac.tads.dsw.repositories;
 
 import br.senac.tads.dsw.entities.Pessoas;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
@@ -20,3 +20,5 @@ import org.springframework.transaction.annotation.Transactional;
 public interface PessoasRepository extends JpaRepository<Pessoas,Long>{
     
 }
+
+

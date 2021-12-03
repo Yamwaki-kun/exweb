@@ -25,7 +25,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
  */
 @RestController
 @RequestMapping(value = "/pessoas")
-@ComponentScan
+
 public class PessoasController {
     @Autowired
     private PessoasService pessoae;

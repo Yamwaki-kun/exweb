@@ -6,8 +6,10 @@
 package br.senac.tads.dsw.services;
 
 import br.senac.tads.dsw.entities.Pessoas;
+import br.senac.tads.dsw.repositories.PessoasRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Service;
 
 
@@ -16,18 +18,20 @@ import org.springframework.stereotype.Service;
  * @author Arnaldo
  */
 @Service
-
 public class PessoasService {
+    
     @Autowired
-    private PessoasService pessoae;
+    private PessoasRepository pr;
+    
     
     public List<Pessoas> findAll() {
         
-		return pessoae.findAll();
+		return pr.findAll();
+                
 	}
     public Pessoas insertCliente(Pessoas obj) {
-        System.out.println("chegamo até aqui");
-		 pessoae.insertCliente(obj);
+		     pr.save(obj);
+                      
                  return obj;
 	}
 
